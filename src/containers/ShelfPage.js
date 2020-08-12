@@ -12,7 +12,7 @@ const ShelfPage = (props) => {
         {props.myShelf.length ? (
           <h1 className="page-header">Nice shelf, you have good taste.</h1>
         ) : (
-          <h1 className="page-header">Your shelf is empty!</h1>
+          <h1 className="page-header">Your shelf is empty</h1>
         )}
       </Container>
       <Container
