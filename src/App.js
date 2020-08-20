@@ -10,12 +10,12 @@ import Footer from './components/Footer'
 import HomeHeader from './components/HomeHeader'
 import LibraryHeader from './components/LibraryHeader'
 
-require('dotenv').config()
-const db = require('db')
+// require('dotenv').config()
+// const db = require('db')
 
-db.connect({
-  KEY: process.env.REACT_APP_API_KEY,
-})
+// db.connect({
+//   KEY: process.env.REACT_APP_API_KEY,
+// })
 
 const API = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&`;
 export const FilterContext = React.createContext()
