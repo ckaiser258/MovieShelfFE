@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 import HomeHeader from './components/HomeHeader'
 import LibraryHeader from './components/LibraryHeader'
 
-const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&`;
+const API = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&`;
 export const FilterContext = React.createContext()
 
 // let localAPI = "http://localhost:3000/";
