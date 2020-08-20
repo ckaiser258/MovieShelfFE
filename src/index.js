@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
+require('dotenv').config()
+const db = require('db')
+
+db.connect({
+  KEY: process.env.REACT_APP_API_KEY,
+})
+
 ReactDOM.render(
 <App />, document.getElementById('root')
 );
