@@ -13,7 +13,8 @@ import LibraryHeader from './components/LibraryHeader'
 const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&`;
 export const FilterContext = React.createContext()
 
-let localAPI = "http://localhost:3000/";
+// let localAPI = "http://localhost:3000/";
+let localAPI = "https://movie-shelf-backend.herokuapp.com/";
 
 class App extends Component {
   constructor(props) {
