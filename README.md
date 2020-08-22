@@ -55,7 +55,7 @@ The backend of the application leverages Ruby on Rails API functionality to rece
 * React Router
 
 ### Server Dependencies
-Refer to the backend repo at https://github.com/ckaiser258/MovieShelfBE for instructions to set up the backend server and PostgreSQL
+The app uses a Heroku server as it's backend and the frontend is hosted here: https://movieshelf.netlify.app, but if you'd like to run the server locally, refer to the backend repo at https://github.com/ckaiser258/MovieShelfBE for instructions to set up the server locally and PostgreSQL. (See note below the "Running" section in this README as well.)
 
 ### Installation:
 
@@ -63,20 +63,19 @@ Download this entire git repository to your computer and place in your desired i
 
 If you don't have the above dependencies:
 
-First, if you do not currently have Node Package Manager (NPM), follow their guide here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm.
-
-Next, to install ReactJS, React Bootstrap, and React Router, in a terminal navigate to the directory in which you installed this repo, then execute `npm install react react-dom --save`. Then, run `npm install webpack webpack-dev-server webpack-cli --save`, `npm install react-bootstrap bootstrap`, and `npm install --save react-router-dom`
-
-Finally, execute ```npm install``` to install all other required node packages.
+1. If you do not currently have Node Package Manager (NPM), follow their guide here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm.
+2. To install ReactJS, React Bootstrap, and React Router, in a terminal navigate to the directory in which you installed this repo, then execute `npm install react react-dom --save`. Then, run `npm install webpack webpack-dev-server webpack-cli --save`, `npm install react-bootstrap bootstrap`, and `npm install --save react-router-dom`
+3. Finally, execute ```npm install``` to install all other required node packages.
 
 ### External API Setup - Frontend
 The movie search functionality requires the setup of the Open Movie Database API with your own personal key. Visit ```http://www.omdbapi.com/``` to obtain a key.
 Once you have your key, navigate to the root directory of the project (MOVIESHELF-FRONTEND) and create a ```.env``` file. Inside this file on the first line type: ```REACT_APP_API_KEY=yourapikey```. This file will automatically be added to the .gitignore.
 In App.js on line 10, notice that the URL is being passed the api key via the environment variable, instead of it be hard-coded in. To maintain security, be sure to use the environment varible to refer to your key anywhere you use it.
 
-
 ### Running:
-This project was designed as a proof of concept so it requires hosting locally. To start hosting the local server navigate to the directory in which this repo was installed. Then, via a terminal interface execute ```npm start```. If you started your rails server before this you will be prompted to enter Y/N to use an unoccupied port. Enter `y` and after a moment your browser should automatically load the application. At this point the application will load and all functionality should be available.
+This project is hosted at https://movieshelf.netlify.app, but if you'd like to run it locally: Navigate to the directory in which this repo was installed. Then, via a terminal interface execute ```npm start```. If you started your rails server before this you will be prompted to enter Y/N to use an unoccupied port. Enter `y` and after a moment your browser should automatically load the application. At this point the application will load and all functionality should be available.
+
+NOTE: If you're planning on using the local server from the backend repo located here: https://github.com/ckaiser258/MovieShelfBE, you'll need to navigate to the installed directory and open the project with a text editor. Then, in App.js, uncomment the commented out `localAPI` variable, and comment out the one below it. This will change the defined backend API from Heroku to your local server. Save the file.
 
 ### License
 Copyright 2020 Colton Kaiser, Joshua Mclean, Justin Langlinais, Trevor Low
